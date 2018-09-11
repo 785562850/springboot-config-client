@@ -1,5 +1,5 @@
 zuul:
-  routes.serviceprovider.path: /test/**
+  routes.serviceprovider.path: /serviceprovider/**
   routes.serviceprovider.serviceId: serviceprovider
 #  filter:
 #    #动态加载过滤器的储存路径
