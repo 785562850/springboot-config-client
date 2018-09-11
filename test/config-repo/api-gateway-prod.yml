@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      uri: http://localhost:1103
+server:
+  port: 1101
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://master:1001/eureka/
+zuul:
+  routes: serviceprovider.path=/serviceprovider/**
+           serviceprovider.serviceId=serviceprovider
+  filter:
+    #动态加载过滤器的储存路径
+    root: filter
+    #配置动态加载的间隔时间
+    interval: 5
